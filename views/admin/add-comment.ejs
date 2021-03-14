@@ -1,0 +1,22 @@
+<link rel="stylesheet" type="text/css" href="/css/form.css" >
+</head>
+<body>
+    <%- include('../includes/head.ejs') %>
+    <h2>Add a comment about the CV</h2>
+    <main>
+        <form class="info-form" action="/admin/<% {%>add-comment<% } %>" method="POST">
+            <div class="form-control">
+                <label for="userName">Name</label><br> 
+                <input required type="text" name="userName" id="userName" value="<% { %><%= comments.userName %><% } %>">
+            </div>
+            <div class="form-control">
+                <label for="description">Description</label><br> 
+                <textarea required name="description" id="description" rows="5"><% { %><%= comments.description %><% } %></textarea>
+            </div>
+
+
+            <button class="btn" type="submit"><% { %>Add Comment<% } %></button>
+            <input type="button" onclick="location.href='/';" value="Home page" />
+        </form>
+    </main>
+<%- include('../includes/end.ejs') %>

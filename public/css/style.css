@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+:root{
+    --bounce-color: #72a7d8;
+    --image-size: 400px;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+	background: WhiteSmoke;
+	font-family: 'Ubuntu', sans-serif;
+	color: #0f383e;
+	text-align: center;
+}
+    
+.holder {
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.holder-left {
+    width: 40%;
+    /*position: absolute;
+    left: 0px;
+    background-color: rgb(103, 133, 163);
+    top: 0;*/
+    padding-bottom: 5rem;
+    background-color: rgb(103, 133, 163);
+    float: left;
+    
+}
+
+.holder-right {
+    width: 60%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    /*position: absolute;
+    right: 0px;*/
+    float: right;
+}
+.container{
+    clear: both;
+}
+.clear{
+    width: 100%;
+    height: 1px;
+    clear: both;
+}
+.avatar {
+	margin: 2rem;			
+
+}
+
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*For title style only*/
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color: rgb(251, 255, 251);
+}
+
+/*For name style only*/
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+p.left{
+    font-size: 0.95rem;
+    padding: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+p {
+    font-size: 0.95rem;
+    text-align: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+img.hobby{
+    height: 50px;
+    width: 50px;
+}
+
+img.user {
+    height: var(--image-size);
+    width: var(--image-size);
+    background-color: var(--bounce-color) ;
+    box-shadow: 0 0 0 5px var(--bounce-color);
+    border-radius: 50%;
+}
+
+img.user:hover {
+	cursor: pointer; 
+	animation:bounceOut .4s linear;
+}
+
+.comment{
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+.comment-author{
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 15px;
+}
+
+
+
+@keyframes bounceOut {
+        0%{ box-shadow: 0 0 0 4px var(--bounce-color); opacity:1;}
+        25% { box-shadow: 0 0 0 1px var(--bounce-color); opacity:1;}
+        50%{ box-shadow: 0 0 0 7px var(--bounce-color); opacity:1; }
+        75%{ box-shadow: 0 0 0 4px var(--bounce-color); opacity:1;}
+        100%{ box-shadow: 0 0 0 5px var(--bounce-color); opacity:1;}
+}

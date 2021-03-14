@@ -1,0 +1,137 @@
+<link rel="stylesheet" href="/ccs/style.css" >
+</head>
+<body>
+    <%- include('../includes/head.ejs') %>
+
+    <div class="container">
+
+        <div class="holder-left">
+            <% for (let info of infos) { %>
+                <h3>My CV - Curriculum Vitae</h3>
+                <div class="avatar">
+                    <a href="/admin/add-comment">
+                        <img alt="Comment my CV" src="<%= info.imageUrl %>" class="user">
+                    </a>
+                </div>
+                <h4><%= info.name %></h4>
+                <h2>Job</h2>
+                <p class="left"><%= info.job %></p>
+
+                <h1>Personal information</h1>
+                <h2>Date of birth </h2>
+                <p class="left"><%= info.birth %></p>
+                <h2>Address</h2>
+                <p class="left"><%= info.address %></p>
+                <h2>Email</h2>
+                <p class="left"><%= info.email %></p>
+                <h2>Phone</h2>
+                <p class="left"><%= info.phone %></p>
+            <% } %>
+        </div>
+
+        <div class="holder-right">
+            <% for (let info of infos) { %>
+                    <h1 style="cursor: pointer;" onclick="myFunction('3')">About Me</h1>
+                    <div style="display: none;" id = "3">
+                        <p><%= info.about %></p>
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('4')">Work Experience</h1>
+                    <div style="display: none;" id = "4">
+                        <% info.workExperience.forEach (work => { %>
+                            <b><p><%= work.start %> - <%= work.end %></p></b>
+                            <p><%= work.company %></p>
+                            <p><%= work.jobTitle %></p>
+                            <br>
+                        <% }); %>
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('5')">Education</h1>
+                    <div style="display: none;" id = "5">
+                        <% info.education.forEach (ed => { %>
+                            <b><p><%= ed.start %> - <%= ed.end %></p></b>
+                            <p><%= ed.school %></p>
+                            <p><%= ed.educationTitle %></p>
+                            <p><%= ed.educationLevel %></p>
+                            <br>
+                        <% }); %>
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('6')">Computer skills</h1>
+                    <div style="display: none;" id = "6" >
+                        <% info.workSkills.forEach (skills => { %>
+                            <p><b><%= skills.skillName %></b> <%= skills.level %></p>
+                            <br>
+                        <% }); %>  
+                    </div>  
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('7')">Language</h1>
+                    <div style="display: none;" id = "7" >
+                    <% info.language.forEach(lang => {  %>
+                        <p><b><%= lang.languageName %>: </b> <%= lang.languageLevel %></p>
+                    <% }); %> 
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('8')">Hobby</h1>
+                    <div style="display: none;width: 250px;margin:0 auto;" id = "8" >
+                    <% info.hobby.forEach (hob => { %>
+                        <p><img src="<%= hob.hobbyUrl %>" class="hobby" style="float:left;">
+                            <div style="line-height: 50px;"><%= hob.hobbyName %></div>
+                        </p>
+                        <br>
+                    <% }); %> 
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('9')">Additional information</h1>
+                    <div style="display: none;" id="9">
+                        <% info.add.forEach (add => { %>
+                            <p><b><%= add.addTitle %>:</b> <%= add.addExplanation %></p>
+                        <% }); %> 
+                    </div>
+
+                    <h1 style="cursor: pointer;" onclick="myFunction('10')">Comments about CV</h1>
+                    <div style="display: none;" id="10">
+                        <p><i>You can add comments by clicking on the CV´s profile picture.</i></p>
+                        <div class="comments-container">
+                            <% for (let comment of comments) { %>
+                            <div class="comment">
+                                <p><span class="comment-author"><%= comment.userName %>: </span><%= comment.description %></p>
+                            </div>
+                            <% } %>
+                        </div>
+                    </div>
+            <% } %>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+    <%- include('../includes/end.ejs') %>
+
+    <script>
+
+        let initialLeftBoxHeight = 1000;
+
+        function myFunction(id){
+            var x = document.getElementById(id);
+            if(x.style.display ==='none') {
+                x.style.display = 'block';
+            } 
+            else {
+                x.style.display = 'none';
+            }
+            resizeLeft();
+        }
+        function resizeLeft(){
+            var newHeight = document.getElementsByClassName("holder-right").item(0).offsetHeight;
+            if(newHeight<initialLeftBoxHeight){
+                newHeight = initialLeftBoxHeight;
+            }
+            document.getElementsByClassName("holder-left").item(0).style.height = newHeight;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+            initialLeftBoxHeight = document.getElementsByClassName("holder-left").item(0).offsetHeight;
+        });
+    </script>

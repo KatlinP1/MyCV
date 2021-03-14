@@ -1,0 +1,149 @@
+[
+    {
+        "id": 1,
+        "name": "Kätlin Paju",
+        "imageUrl": "https://image.freepik.com/free-vector/woman-girl-female-cartoon-avatar-icon_25030-13349.jpg",
+        "job": "Student",
+        "birth": "28.10.1997",
+        "address": "Address 12 - 34",
+        "email": "mail@mail.com",
+        "phone": "5555555555",
+        "language": [
+            {
+                "languageName": "Estonian",
+                "languageLevel": "Native language"
+            },
+            {
+                "languageName": "English",
+                "languageLevel": "(C1) good in writing, good in speech (everyday language used at work)"
+            },
+            {
+                "languageName": "German",
+                "languageLevel": "(B1 / B2) - average in writing and speech"
+            }
+        ],
+        "about": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod augue justo, eget accumsan massa facilisis non.",
+        "workExperience": [
+            {
+                "company": "Tallinn University, Educational Technology Center",
+                "jobTitle": "Intern",
+                "start": "2020-10",
+                "end": ""
+            },
+            {
+                "company": "OÜ Trumpit Solutions",
+                "jobTitle": "Intern",
+                "start": "2020-02",
+                "end": "2020-05"
+            },
+            {
+                "company": "Tallinn University, School of Governance, Law and Society",
+                "jobTitle": "Research Assistant",
+                "start": "2018-10",
+                "end": ""
+            },
+            {
+                "company": "The National Audit Office (Riigikontroll)",
+                "jobTitle": "Intern (Human resources department)",
+                "start": "2018-05",
+                "end": "2018-07"
+            },
+            {
+                "company": "H&M",
+                "jobTitle": "Shop assistant (klienditeenindaja)",
+                "start": "2017-11",
+                "end": "2018-05"
+            },
+            {
+                "company": "Reserved",
+                "jobTitle": "Shop assistant (klienditeenindaja)",
+                "start": "2017-05",
+                "end": "2017-10"
+            }
+        ],
+        "education": [
+            {
+                "school": "Tallinn Industrial Education Center (Tallinna Tööstushariduskeskus)",
+                "educationTitle": "Junior Software Developer (Noorem tarkvaraarendaja)",
+                "educationLevel": "Vocational education (Kutseharidus)",
+                "start": "2019",
+                "end": ""
+            },
+            {
+                "school": "Tallinn University",
+                "educationTitle": "Political science (Riigiteadus)",
+                "educationLevel": "Higher Education (Kõrgharidus) - bachelor's degree (BA)",
+                "start": "2016",
+                "end": "2019"
+            },
+            {
+                "school": "Pelgulinna Gymnasium (Pelgulinna Gümnaasium)",
+                "educationTitle": "Humanitarian and cultural direction",
+                "educationLevel": "Secondary education (Keskharidus)",
+                "start": "2013",
+                "end": "2016"
+            },
+            {
+                "school": "Tallinn Õismäe Gymnasium (Tallinna Õismäe Gümnaasium)",
+                "educationTitle": "German language direction",
+                "educationLevel": "Basic education (Põhiharidus)",
+                "start": "2004",
+                "end": "2013"
+            }
+        ],
+        "workSkills": [
+            {
+                "skillName": "HTML",
+                "level": "70%"
+            },
+            {
+                "skillName": "SASS and CSS",
+                "level": "70%"
+            },
+            {
+                "skillName": "C++",
+                "level": "50%"
+            },
+            {
+                "skillName": "PHP",
+                "level": "60%"
+            },
+            {
+                "skillName": "EJS",
+                "level": "40%"
+            },
+            {
+                "skillName": "Databases (MongoDB)",
+                "level": "40%"
+            }
+        ],
+        "hobby": [
+            {
+                "hobbyName": "Reading",
+                "hobbyUrl": "https://cdn3.iconfinder.com/data/icons/book-shop-category-ouline/512/Book_Shop_Category-06-512.png"
+            },
+            {
+                "hobbyName": "Table games / games",
+                "hobbyUrl": "https://icon-library.com/images/icon_66244-512_51420.png"
+            },
+            {
+                "hobbyName": "Watching Movies",
+                "hobbyUrl": "https://cdn4.iconfinder.com/data/icons/movies-1-outline/60/029_-_TV_Play-512.png"
+            },
+            {
+                "hobbyName": "Travel",
+                "hobbyUrl": "https://e7.pngegg.com/pngimages/545/127/png-clipart-earth-world-computer-icons-travel-globe-transport-tourist-white-building.png"
+            }
+        ],
+        "add": [
+            {
+                "addTitle": "Driver's licence",
+                "addExplanation": "B-category (2016)"
+            },
+            {
+                "addTitle": "Course",
+                "addExplanation": " DigiTarkus e-course / DigiTarkuse e-kursus (05.2020-12.2020) (Tallinn University of Technology)"
+            }
+        ]
+    }
+]
