@@ -139,7 +139,36 @@ img.user:hover {
     padding-right: 15px;
 }
 
-
+.fixed-btn-bottom{
+    cursor: pointer;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border-radius: 50%;
+    
+}
+.fixed-btn-bottom > div{
+    height: 75px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+.fixed-btn-bottom > div i{
+    line-height: 75px;
+    color: white;
+}
+.fixed-btn-bottom > div a{
+    background: rgb(103, 133, 163);
+    display: block;
+    height: 100%;
+    border-radius: 50%;
+}
+.fixed-btn-bottom > div a:hover{
+    background: #72a7d8;
+    transition: 0.5s;
+}
 
 @keyframes bounceOut {
         0%{ box-shadow: 0 0 0 4px var(--bounce-color); opacity:1;}
